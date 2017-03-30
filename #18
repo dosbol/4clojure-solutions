@@ -1,0 +1,5 @@
+(filter #(< % 15) (list 6 120 7 35))
+
+
+
+source: https://www.4clojure.com/problem/18
