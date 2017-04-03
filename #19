@@ -1,0 +1,10 @@
+(fn [seq] 
+  (loop [ [part & remain] seq] 
+    (if (empty? remain) 
+      part 
+      (recur remain))))
+      
+      
+      
+      
+source:https://www.4clojure.com/problem/19
