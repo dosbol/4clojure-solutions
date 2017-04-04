@@ -1,0 +1,11 @@
+solution 1:
+(fn [sequen] (let [length (count sequen)] (loop [iter 1 counter length sequ sequen]
+                          (if (= iter (- counter 1)) (first sequ) (recur (inc iter) counter (rest sequ)))
+                          )))
+
+solution 2:
+(comp first rest reverse)
+
+
+
+source: https://www.4clojure.com/problem/20
