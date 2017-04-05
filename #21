@@ -1,0 +1,12 @@
+solution1:
+(fn [sequen n] (loop [iter 0 counter n sequ sequen]
+                               (if (= iter counter) (first sequ) (recur (inc iter) counter (rest sequ)))
+                               ))
+
+solution2: 
+(fn [s n](loop [s s n n](if (= n 0) (first s) (recur (rest s) (- n 1)))))
+
+
+
+
+source: https://www.4clojure.com/problem/21
