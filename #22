@@ -1,0 +1,5 @@
+(fn [s] (loop [c 0 s s] (if (empty? s) c (recur (inc c) (rest s)))))
+
+
+
+source: https://www.4clojure.com/problem/22
