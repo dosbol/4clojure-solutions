@@ -1,0 +1,7 @@
+(fn [s] (loop [s s n 0 total (count s) ans []]
+          (if (= n total) 
+            ans 
+            (recur s (inc n) total (into ans (vector (nth (seq s) (- (count s) n 1))))))))
+            
+
+source: http://www.4clojure.com/problem/23
