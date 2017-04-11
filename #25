@@ -1,0 +1,11 @@
+solution1:
+(fn [s] (filter #(= (mod % 2) 1) s))
+
+
+solution2: 
+(fn [s] (filter #(odd? %) s))
+
+
+
+
+source: https://www.4clojure.com/problem/25
