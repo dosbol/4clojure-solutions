@@ -1,0 +1,10 @@
+(fn[n] 
+  (if (= n 1) '(1) 
+  (loop[s '(1 1) count (- n 2) fib-2 1 fib-1 1]
+    (if (= count 0) 
+      (reverse s)
+      (recur (conj s (+ fib-2 fib-1)) (- count 1) fib-1 (+ fib-2 fib-1))))))
+
+
+
+source: http://www.4clojure.com/problem/26
