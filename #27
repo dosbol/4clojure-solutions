@@ -1,0 +1,6 @@
+#(if (= (type %) String) (= % (clojure.string/reverse %)) (= % (reverse %)))
+
+
+
+
+source: http://www.4clojure.com/problem/27
