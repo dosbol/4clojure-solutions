@@ -1,0 +1,20 @@
+(fn f [s]
+  (if-not (sequential? s) s)
+  
+  (loop [res [] curr (first s) base (rest s)]
+        
+      (let [empseqcur? (and (sequential? curr) (empty? curr))
+            notempseqcur? (and (sequential? curr) (not (empty? curr)))]
+          
+        (if (and empseqcur? (empty? base)) res 
+          
+          (if (and (not (sequential? curr)) (empty? base))
+              (conj res curr)
+
+            (recur (if empseqcur? res (if (sequential? curr) res (conj res curr)))
+                   (if notempseqcur? (first curr) (first base))
+                   (if notempseqcur? (conj base (rest curr)) (rest base))))))))
+                   
+                   
+                   
+source: https://www.4clojure.com/problem/28
