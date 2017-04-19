@@ -1,0 +1,5 @@
+(fn [s] (apply str (filter #(Character/isUpperCase %) s)))
+
+
+
+source: https://www.4clojure.com/problem/29
