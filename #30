@@ -1,0 +1,12 @@
+(fn [ lst ]
+  	(loop [l lst nl []]
+      (if (empty? l)
+        	nl
+        	(recur (rest l) (if (= (last nl) (first l)) 
+                              	nl
+                              	(conj nl (first l)))))))
+                                
+                                
+                                
+                                
+source: https://www.4clojure.com/problem/30
