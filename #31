@@ -1,0 +1,10 @@
+(fn f [s]
+  (loop [res '() cur (first s) curlist '() base s]
+
+    (let [same? (= cur (first base))]
+    
+    (if (empty? base) (reverse (conj res curlist))
+     (recur (if same? res (conj res curlist))
+            (first base)
+            (if same? (conj curlist cur) (list(first base)))
+            (rest base))))))
