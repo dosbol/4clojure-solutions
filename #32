@@ -1,0 +1,9 @@
+(fn[vct]
+  	(loop [v vct new-v []]
+      (if (empty? v)
+        	new-v
+        	(recur (rest v) (conj new-v (first v) (first v))))))
+          
+          
+          
+source: http://www.4clojure.com/problem/32
