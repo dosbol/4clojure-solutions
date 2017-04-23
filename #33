@@ -1,0 +1,7 @@
+(fn [s n]
+  (mapcat #(take n (repeat %)) s))
+  
+  
+  
+  
+source: http://www.4clojure.com/problem/33
