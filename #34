@@ -1,0 +1,8 @@
+(fn[n m]
+  	(loop[i m l '()]
+      	(if (= i n)
+          	 l
+          	(recur (dec i) (conj l (dec i))))))
+            
+            
+source: https://www.4clojure.com/problem/34
