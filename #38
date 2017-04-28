@@ -1,0 +1,6 @@
+(fn[& more](last (sort more)))
+
+
+
+
+source: https://www.4clojure.com/problem/38
