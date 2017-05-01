@@ -1,0 +1,11 @@
+(fn [& lsts]
+   (let [[lst1 lst2] lsts]
+  	(loop [l-1 lst1 l-2 lst2 nl []] 
+      	(if (or (empty? l-1) (empty? l-2)) 
+          	nl
+          	(recur (rest l-1) (rest l-2) (conj nl (first l-1) (first l-2)))))))
+
+
+
+
+source: http://www.4clojure.com/problem/39
