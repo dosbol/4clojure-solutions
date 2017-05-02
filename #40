@@ -1,0 +1,8 @@
+(fn [a lst ]
+  	(loop [l (rest lst) nl [(first lst)]]
+      (if (empty? l)
+        	nl
+        	(recur (rest l) (conj nl a (first l))))))
+          
+          
+source: http://www.4clojure.com/problem/40
