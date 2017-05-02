@@ -1,0 +1,11 @@
+(fn [lst n]
+  	(loop [l lst nl [] count 1]
+      (if (empty? l)
+        	nl
+        	(recur  (rest l) 
+        	        (if (= count n) nl (conj nl (first l)))
+                  (if (= count n) 1 (+ count 1))))))
+                  
+                  
+                  
+source: http://www.4clojure.com/problem/41 
