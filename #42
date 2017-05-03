@@ -1,0 +1,6 @@
+(fn [n]
+  	(reduce * (rest (range (+ 1 n)))))
+    
+    
+    
+source: http://www.4clojure.com/problem/42
