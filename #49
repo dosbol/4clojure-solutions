@@ -1,0 +1,7 @@
+(fn [n s]
+  (loop [s1 [] sx s count 0] 
+    (if (= count n) [s1 sx]
+      (recur (conj s1 (first sx)) (rest sx) (inc count)))))
+      
+      
+source: http://www.4clojure.com/problem/49
