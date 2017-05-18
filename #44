@@ -1,5 +1,5 @@
 (fn [n s]
-  (let [rot (rem (+ (count s) n) (count s))]
+  (let [rot (rem n (count s))]
     (loop [n rot res s]
     	(cond
           (> n 0) (recur (dec n) (conj (vec (rest res)) (first res)))
