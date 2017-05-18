@@ -1,0 +1,10 @@
+(fn [s n]
+  (let [length (int (/ (count s) n)) ]
+    (loop [i 0 res (vec (take n (iterate identity [])))]
+      (if (= (count s) i) res
+        (recur (inc i)  (assoc res (rem i n) (conj (nth res (rem i n)) (nth s i))))))))
+        
+        
+        
+        
+source: http://www.4clojure.com/problem/43
