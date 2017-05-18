@@ -1,0 +1,12 @@
+(fn [n s]
+  (let [rot (rem (+ (count s) n) (count s))]
+    (loop [n rot res s]
+    	(cond
+          (> n 0) (recur (dec n) (conj (vec (rest res)) (first res)))
+          (< n 0) (recur (inc n) (cons (last res) (drop-last res)))
+          :else res))))
+          
+          
+          
+          
+source: http://www.4clojure.com/problem/44
