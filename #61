@@ -1,0 +1,6 @@
+(fn [k v]
+  (apply hash-map (reduce #(apply conj %1 %2) [] (map #(conj [] %1 %2) k v))))
+  
+  
+  
+source: http://www.4clojure.com/problem/61
