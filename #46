@@ -1,0 +1,6 @@
+(fn [func] (fn [a b] (func b a)))
+
+
+
+
+source: http://www.4clojure.com/problem/46
