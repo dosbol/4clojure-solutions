@@ -1,0 +1,7 @@
+(fn [a b]
+  (if (= a b)
+    	a
+    	(recur (- (max a b) (min a b)) (min a b))))
+      
+      
+source: 
