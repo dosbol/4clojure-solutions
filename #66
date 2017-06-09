@@ -4,4 +4,4 @@
     	(recur (- (max a b) (min a b)) (min a b))))
       
       
-source: 
+source: http://www.4clojure.com/problem/66
