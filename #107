@@ -1,0 +1,6 @@
+(fn [n] (fn [x] (reduce * (repeat n x))))
+
+
+
+
+source: http://www.4clojure.com/problem/107
