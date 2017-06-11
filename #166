@@ -1,0 +1,10 @@
+(fn [f a b] 
+   (let [res1 (f a b) res2 (f b a)]
+      (cond
+          (and (= res1 false) (= res2 true)) :gt
+          (and (= res1 false) (= res2 false)) :eq 
+          :else :lt)))
+          
+          
+          
+source: http://www.4clojure.com/problem/166
