@@ -1,0 +1,8 @@
+(fn [& xs]
+   (and 
+      (> (count (filter #(= true %) xs)) 0)
+      (> (count xs) (count (filter #(= true %) xs)))))
+      
+      
+ 
+source: http://www.4clojure.com/problem/83
