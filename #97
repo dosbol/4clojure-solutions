@@ -1,0 +1,10 @@
+(fn [n]
+	(loop [i 1 res [1]]
+		(let [zero-appended (conj res 0)
+      		  zero-prepended (cons 0 res)
+      		  next-res (map + zero-appended zero-prepended)]
+			(if (= i n) res (recur (inc i) (into [] next-res))))))
+      
+      
+      
+source: http://www.4clojure.com/problem/97
