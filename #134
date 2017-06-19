@@ -1,0 +1,6 @@
+#(nil? (%1 %2 :no))
+
+
+
+
+source: http://www.4clojure.com/problem/134
