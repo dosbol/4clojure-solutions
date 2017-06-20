@@ -1,0 +1,5 @@
+(filter #(= 1 (rem % 4)) (range 40))
+
+
+
+source: http://www.4clojure.com/problem/145
