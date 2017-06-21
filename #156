@@ -1,0 +1,6 @@
+(fn [default keys] (reduce #(conj %1 {%2 default}){} keys))
+
+
+
+
+source: http://www.4clojure.com/problem/156
