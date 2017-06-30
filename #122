@@ -1,0 +1,10 @@
+(fn [s]
+  (->> s
+    (map #(Character/getNumericValue %))
+    reverse
+    (map #(* (apply * (repeat %1 2)) %2) (iterate inc 0))
+    (reduce +)))
+    
+    
+    
+source: http://www.4clojure.com/problem/122
