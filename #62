@@ -1,0 +1,5 @@
+(fn iter [f x] (lazy-seq (cons x (iter f (f x)))))
+
+
+
+source: http://www.4clojure.com/problem/62
