@@ -1,0 +1,7 @@
+(fn [a b] 
+  (loop [res [] mul (* a b)] 
+    (if (= mul 0) (reverse res) 
+      (recur (conj res (rem mul 10)) (quot mul 10)))))
+      
+      
+source: http://www.4clojure.com/problem/99
