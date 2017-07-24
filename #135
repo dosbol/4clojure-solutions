@@ -1,0 +1,8 @@
+(fn [& args] (loop [arg (rest args) acc (first args)]
+                   (if (empty? arg) acc
+                       (recur (rest (rest arg)) ((first arg) acc (first (rest arg)))))))
+                       
+                       
+                       
+                       
+source: http://www.4clojure.com/problem/135
