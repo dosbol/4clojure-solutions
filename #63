@@ -1,0 +1,10 @@
+(fn[f s] 
+      (loop [sx s acc {}]
+            (if-let [a (first sx)] 
+                (recur (rest sx) (into acc [[(f a) (into (vec(get acc (f a))) [a])]]))
+                acc))) 
+                
+                
+                
+                
+source: http://www.4clojure.com/problem/63
