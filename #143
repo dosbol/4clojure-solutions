@@ -1,0 +1,7 @@
+(fn [s1 s2] (loop [s1x s1 s2x s2 acc 0]
+              (if (empty? s1x) acc 
+                (recur (rest s1x) (rest s2x) (+ acc (* (first s1x) (first s2x)))))))
+                
+                
+                
+source: http://www.4clojure.com/problem/143
