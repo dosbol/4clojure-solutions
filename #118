@@ -1,0 +1,8 @@
+(fn g [f s] 
+  (lazy-seq 
+    (when-let [ss (seq s)] 
+      (cons (f (first s)) (g f (rest s))))))
+      
+      
+      
+source: http://www.4clojure.com/problem/118
