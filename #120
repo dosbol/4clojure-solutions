@@ -1,0 +1,12 @@
+(fn [s] (letfn [(get-digits [number]
+                 (loop [n number acc '()]
+                   (if (= n 0) acc (recur(quot n 10) (conj acc (mod n 10))))))
+ 
+                (square-of-digits [number]
+                  (reduce + 0 (map #(* % %) (get-digits number))))] 
+          
+			     (count (filter #(< % (square-of-digits %)) s))))
+      
+      
+      
+source: http://www.4clojure.com/problem/120
