@@ -1,0 +1,10 @@
+(fn [& s1]  
+  (let [m (apply max s1)]
+      (loop [acc m]
+         (if (= 0 (count (filter #(not= 0 (rem acc %)) s1))) 
+             acc 
+             (recur (+ acc m))))))
+             
+             
+             
+source: http://www.4clojure.com/problem/100
