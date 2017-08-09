@@ -1,0 +1,8 @@
+(fn [s]
+     (loop [sx s i 0 acc []]
+           (if (empty? sx) acc
+               (recur (rest sx) (inc i) (conj acc [(first sx) i])))))
+               
+               
+               
+source: http://www.4clojure.com/problem/157
